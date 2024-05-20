@@ -5,4 +5,4 @@ canvas.width = 600;
 canvas.height = 600;
 
 const background = new Image();
-background.src = "./src/assets/images/space.png";
+background.src = "src/assets/images/space.png";

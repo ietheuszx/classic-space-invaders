@@ -10,7 +10,7 @@ export default class BulletController {
         this.bulletColor = bulletColor;
         this.soundEnable = soundEnable;
 
-        this.bulletSound = new Audio('./src/assets/sounds/shoot.wav');
+        this.bulletSound = new Audio('src/assets/sounds/shoot.wav');
         this.bulletSound.volume = 0.1;        
     }
     draw(ctx) {
