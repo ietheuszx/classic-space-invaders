@@ -30,4 +30,16 @@ export default class EnemyController {
         
         this.createEnemies();
     }
+    collisionDetection() {
+        this.enemyRows.forEach((enemyRow) => {
+            enemyRow.forEach((enemy, enemyIndex) => {
+                if(this.playerBulletContorller.collideWith(enemy)) {
+                    this.enemyDeathSound.currentTime = 0;
+                    this.enemyDeathSound.play();
+                    enemyRow.splice(enemyIndex, 1);
+                }
+            });
+        });
+        this.enemyRows = this.enemyRows.filter((enemyRow) => enemyRow.length > 0);
+    }
 }
