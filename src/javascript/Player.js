@@ -42,6 +42,7 @@ export default class Player{
             this.x = this.canvas.width - this.width;
         }
     }
+
     keydown = (event) => {
         if(event.code == "ArrowRigth") {
             this.rightPressed = true;
@@ -53,6 +54,7 @@ export default class Player{
             this.shootPressed = true;
         }
     }
+    
     keyup = (event) => {
         if(event.code == "ArrowRigth") {
             this.rightPressed = false;
@@ -63,5 +65,5 @@ export default class Player{
         if(event.code == "Space") {
             this.shootPressed = false;
         }
-    }
+    };
 }
